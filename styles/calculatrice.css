@@ -1,0 +1,72 @@
+html {
+  background-color: lightslategrey;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.boutons {
+  border: 1px solid black;
+  padding: 25px;
+  padding-right: 35px;
+  border-radius: 20px;
+  width: 300px;
+  display: grid;
+  grid-template-columns: 70% 30%;
+  grid-template-rows: 20% 80%;
+  grid-template-areas:
+    "resultat resultat"
+    "chiffres calcul";
+
+  button {
+    cursor: pointer;
+  }
+
+  .resultat {
+    grid-area: resultat;
+    width: 100%;
+    margin-bottom: 20px;
+
+    input {
+      width: 100%;
+      padding: 10px 0 10px 5px;
+    }
+  }
+
+  .chiffres {
+    grid-area: chiffres;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 5px;
+
+    button {
+      padding: 10px;
+    }
+
+    button:nth-child(10) {
+      /* Le bouton 0 */
+      grid-column: span 2;
+    }
+
+    button:nth-child(11) {
+      /* Le bouton point */
+      grid-column: 3;
+    }
+  }
+
+  .calcul {
+    grid-area: calcul;
+    width: 100%;
+    margin-left: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 5px;
+
+    button:nth-child(6) {
+      /* Le bouton 0 */
+      grid-row: span 2;
+    }
+  }
+}
