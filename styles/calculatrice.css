@@ -6,6 +6,7 @@ html {
 }
 
 .boutons {
+  margin: 0 auto;
   border: 1px solid black;
   padding: 25px;
   padding-right: 35px;
